@@ -2,11 +2,11 @@
 * { 
   box-sizing: border-box;
 }
-  
-/* html, body {
-  width: 100%;
-  height: 100%;
-} */
+
+li {
+  margin: 4px auto;
+  list-style: square;
+}
 
 body {
   margin: 0;
@@ -15,6 +15,10 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #222;
   background: #f7f5f0;
+}
+
+p {
+  text-align: center;
 }
 /* Link Styles */
 
@@ -35,6 +39,7 @@ a:hover {
   padding: 10px;
   position: fixed;
   text-align: center;
+  z-index: 1;
 }
 .nav {
   display: flex;
@@ -55,6 +60,7 @@ a:hover {
 .nav li {
   padding: 5px 10px 10px 10px;
 }
+
 .nav a {
   transition: all .5s;
 }
@@ -62,17 +68,21 @@ a:hover {
   color: white
 }
 
-header {
+.nav li {
+  list-style: none;
+}
+
+.main-header {
   text-align: center;
   background: url('../images/background.jpg') no-repeat center 80% ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
 }
-header {
+.main-header {
   line-height: 1.5;
 }
-header .profile-image {
+.main-header .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
@@ -80,8 +90,9 @@ header .profile-image {
   border: 3px solid white;
   transition: all .5s;
 }
-header .profile-image:hover {
-  transform: scale(1.2) rotate(360deg);
+.main-header .profile-image:hover {
+  transform: scale(2) translate(0px, 50px);;
+  border-color: black;
 }
 .tag {
   background-color: #efefef;
@@ -95,7 +106,7 @@ header .profile-image:hover {
   background-color: #222;
   color: white;
 }
-.flex {
+.main-section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -110,12 +121,22 @@ header .profile-image:hover {
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
 }
-.card:hover {
-  border-color: #18006e;
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 25px;
+  background: linear-gradient(to left,#ff9904, #0399ff);
+  color: #FFF;
+  text-shadow: 1px 1px black;
+  box-shadow: 0px 1px black;
 }
 
-.background-info li {
-  margin: 4px auto;
+.card:hover {
+  border-color: #18006e;
 }
 
 ul.skills {
@@ -124,23 +145,22 @@ ul.skills {
 }
 
 .skills li {
-  border-radius: 6;
+  border-radius: 10px;
   display: inline-block;
   background: #ff9904;
   color: white;
   padding: 5px 10px;
   margin: 2px;
+  box-shadow: 2px 2px black;
 }
 
 .skills li:nth-child(odd) {
   background: #0399ff;
 }
 
-footer {
+.main-footer {
   width: 100%;
   min-height: 1vh;
-  /* min-height: 100vh; */
-  padding: auto;
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
@@ -149,19 +169,19 @@ footer {
   
 }
 
-footer .copyright {
+.main-footer .copyright {
   font-size: .75em;
   flex: 1;
   order: -1;
 }
 
-footer ul {
+.main-footer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-footer ul li {
+.main-footer ul li {
   display: inline-block;
 }
 
@@ -191,18 +211,23 @@ a.social:hover {
   clear: both;
 }
 
+#twitch-embed {
+  margin-top: 50px;
+  height: 400px;
+}
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   
-  .flex {
+  .main-section {
       flex-direction: row;   
       max-width: 1200px;
       justify-content: space-around;
       margin: 0 auto;
   }
 
-  header {
-    min-height: 450px;
+  .main-header {
+    min-height: 250px;
   }
 
   .nav {
@@ -215,15 +240,15 @@ a.social:hover {
     color: white;
   }
 
-  main {
+  .main-section {
     padding-top: 50px;
   }
 
-  main p {
+  .main-section p {
     line-height: 1.6em;
   }
 
-  footer {
+  .main-footer {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 0 auto;
@@ -233,19 +258,17 @@ a.social:hover {
     flex: 1;
   }
 
+  #twitch-embed {
+    
+    height: 560px;
+  }
 }
 
-h3 {
-  color: rgba(0,190,255,.6);
-  letter-spacing: .5px;
+@media screen and (min-width: 1020px) {
+  #twitch-embed {    
+    height: 860px;
+  }
 }
 
-.card-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid black;
-  border-radius: 10px;
-  margin-top: 50px;
 
-}
+
