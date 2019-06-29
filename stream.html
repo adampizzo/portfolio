@@ -5,50 +5,50 @@
   <title>Adam Pizzo's Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"></head>
+  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+</head>
   <body>
-
-    <div class="main-nav">
-        <ul class="nav">
-          <li class="name">Adam Pizzo</li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="experience.html">Experience</a></li>          
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="#">Stream</a></li>
-        </ul>
-    </div>
+    <nav class="main-nav">
+      <ul class="nav">
+        <li class="name">Adam Pizzo</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>          
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#">Stream</a></li>
+      </ul>
+    </nav>
 
     <header class="main-header">
-      <img src="images/Portrait.jpg" alt="Picture of Adam Pizzo" class="profile-image">
+      <img src="images/Atlas_Icon_Cartoon.png" alt="Atlas, Adam's Twitch Avatar" class="twitch-profile-pic">
       <h1 class="tag name">Adam Pizzo</h1>
       <p class="tag location">Coding out of Durham, NC</p>
     </header>
-<main>
-        <h2>My Twitch Stream:</h2>
-    <div id="twitch-embed"></div>
-    
-    
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-    
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        layout: 'video',
-        width: '80%',
-        height: '80%',
-        channel: "atlasventure",
-        theme: 'dark'
-      });
-    </script>
-    <!-- code adapted from https://dev.twitch.tv/docs/embed/everything/ -->
-</main>
-<footer class="main-footer">
-  <ul>
-    <li><a href="https://www.twitter.com/atlasventuretv" class="social twitter" target="_blank">Twitter</a></li>
-    <li><a href="https://linkedin.com/in/adampizzo" class="social linkedin" target="_blank">LinkedIn</a></li>
-    <li><a href="https://github.com/adampizzo" class="social github" target="_blank">Github</a></li>
-  </ul>
-  <copyright class="copyright">&copy;2019, Adam Pizzo</copyright>
-</footer>
-</body>
+    <main class="main-section">
+      <section class="card">
+      <h2 class="card-title">Twitch Stream:</h2>
+      <div id="twitch-embed"><p>I haven't had a lot of time to stream lately, as I am focusing on my tech degree.</p></div>  
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+      <script>
+        new Twitch.Embed("twitch-embed", {
+          layout: 'video',
+          width: '100%',
+          height: '50%',
+          channel: "atlasventure",
+          theme: 'dark'
+        });
+      </script>
+      <!-- code adapted from https://dev.twitch.tv/docs/embed/everything/ -->
+      </section>
+    </main>
+      
+    <footer class="main-footer">
+      <ul>
+        <li><a href="https://www.twitter.com/atlasventuretv" class="social twitter" target="_blank">Twitter</a></li>
+        <li><a href="https://linkedin.com/in/adampizzo" class="social linkedin" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/adampizzo" class="social github" target="_blank">Github</a></li>
+      </ul>
+      <small class="copyright">&copy;2019, Adam Pizzo</small>
+    </footer>
+  </body>
 </html>

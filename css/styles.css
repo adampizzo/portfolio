@@ -91,7 +91,7 @@ a:hover {
   transition: all .5s;
 }
 .main-header .profile-image:hover {
-  transform: scale(2) translate(0px, 50px);;
+  transform: scale(2) translateY(50px);
   border-color: black;
 }
 .tag {
@@ -136,8 +136,23 @@ a:hover {
 }
 
 .card:hover {
-  border-color: #18006e;
+  border-color: darkorange;
 }
+
+.main-header .twitch-profile-pic {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all .5s;
+}
+
+.twitch-profile-pic:hover {
+  transform: scale(2) rotate(360deg) translateY(50px);
+  border-color: black;
+}
+
 
 ul.skills {
   padding: 0;
